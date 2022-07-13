@@ -28,18 +28,14 @@ document.querySelector('#hide-comment').addEventListener('click', ()=>{
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab)=>{
     if(tab.url === "https://youtube.com/"){
         if(isSidebar === 0){
-            isSidebar.style.display = "none";
+            Sidebar.style.display = "none";
         }
         if(isCategory === 0){
-            isCategory.style.display = "none";
+            Category.style.display = "none";
         }
         if(isComments === 0){
-            isComments.style.display = "none";
+            Comments.style.display = "none";
         }
     
     }
 })
-
-
-
-document.getElementsByTagName('ytd-watch-next-secondary-results-renderer').style.visibility = "hidden";
